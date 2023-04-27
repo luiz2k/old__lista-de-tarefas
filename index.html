@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/" type="image/x-icon">
+    <link rel="stylesheet" href="./assets//styles/normalize.css">
+    <link rel="stylesheet" href="./assets//styles/style.css">
+    <script src="./assets//scripts/script.js" defer></script>
+    <title>Lista de Tarefas</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <main>
+        <div class="conteudo">
+            <header>
+                <h1>Lista de Tarefas</h1>
+            </header>
+            
+            <section>
+                <article>
+                    <form id="criar-tarefa">
+                        <div class="formulario-divs">
+                            <label for="tarefa-input">Tarefa</label>
+                            <input type="text" id="tarefa-input">
+                        </div>
+                        <button type="submit" class="criar-tarefa-btn">Criar Tarefa</button>
+                    </form>
+                </article>
+
+                <article>
+                    <form id="editar-tarefa" class="esconder">
+                        <div class="editar-anotacoes-titulo">
+                            <h2>Editando Tarefa</h2>
+                        </div>
+                        <div class="formulario-divs">
+                            <label for="tarefa-input-atual">Tarefa que será editada</label>
+                            <input type="text" id="tarefa-input-atual" disabled>
+                            <label for="tarefa-input-editar">Nome depois da edição</label>
+                            <input type="text" id="tarefa-input-editar">
+                        </div>
+                        <button type="submit" id="confirmar-editar-tarefa-btn">Confirmar</button>
+                        <button type="button" id="cancelar-editar-tarefa-btn">Cancelar</button>
+                    </form>
+                </article>
+
+                <article>
+                    <form id="remover-tarefa" class="esconder">
+                        <div class="editar-anotacoes-titulo">
+                            <h2>Removendo Tarefa</h2>
+                        </div>
+                        <div class="formulario-divs">
+                            <label for="remover-tarefa-input">Tarefa que será removida</label>
+                            <input type="text" id="remover-tarefa-input" disabled>
+                        </div>
+                        <button type="submit" id="confirmar-remover-tarefa-btn">Confirmar</button>
+                        <button type="button" id="cancelar-remover-tarefa-btn">Cancelar</button>
+                    </form>
+                </article>
+
+                <article>
+                    <form id="pesquisar-filtro">
+                        <div class="formulario-divs">
+                            <label for="pesquisar-input">Pesquisar</label>
+                            <input type="search" id="pesquisar-input">
+                        </div>
+                        <div class="formulario-divs filtro">
+                            <label for="filtro">Filtro</label>
+                            <select id="filtro-select">
+                                <option value="todos">Todos</option>
+                                <option value="concluidos">Concluído</option>
+                                <option value="abertos">Aberto</option>
+                            </select>
+                        </div>
+                    </form>
+                </article>
+
+                <article id="anotacoes">
+                    <div class="anotacoes-titulo">
+                        <h2>Tarefas</h2>
+                    </div>
+                    <div class="tarefa-vazio">
+                        <h3 class="tarefa-titulo">Ainda não existe nenhuma tarefa!</h3>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <small class="small-editar-tarefa ocultar"><i class="fa-solid fa-triangle-exclamation"></i> <span class="small-texto"></span> <i class="fa-solid fa-xmark"></i></small>
+</body>
+</html>

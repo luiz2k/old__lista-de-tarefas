@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Farsan&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-size: arial;
+}
+
+:root {
+    ---cor01: #e2e8f0;
+    ---cor02: #93c5fd;
+    ---cor03: #60a5fa;
+    ---cor03: #3b82f6;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background-color: whitesmoke;
+    background: url(../images/background.svg) no-repeat center fixed;
+    background-size: cover;
+}
+
+label,
+button,
+h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+h1,
+h2 {
+    font-family: 'Farsan', cursive;
+    line-height: 1.3;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-left: 3px;
+    line-height: 1.7;
+}
+
+input,
+select {
+    border: none;
+    width: 100%;
+    padding: 5px;
+    transition: .2s;
+    border-radius: 5px;
+    resize: none;
+}
+
+input:hover,
+select:hover {
+    background-color: rgba(255, 255, 255, 0.750);
+}
+
+input:disabled {
+    background-color: rgba(255, 255, 255, 0.400);
+}
+
+input:disabled:hover {
+    background-color: rgba(255, 255, 255, 0.400);
+}
+
+button {
+    background-color: var(---cor02);
+    color: white;
+    padding: 5px;
+    width: min(10rem, 42vw);
+    font-size: min(1.1rem, 4.7vw);
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    transition: .2s;
+}
+
+button:hover {
+    background-color: var(---cor03);
+}
+
+main {
+    flex-basis: 500px;
+    min-width: 0;
+    margin: 10px;
+}
+
+main .conteudo section {
+    padding: 10px;
+}
+
+
+
+
+
+.conteudo {
+    background-color: var(---cor01);
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.150);
+}
+
+.conteudo header {
+    background: radial-gradient(circle, var(---cor02) 0%, var(---cor03) 75%, var(---cor03) 100%);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.conteudo header h1 {
+    margin: 0;
+}
+
+
+
+
+
+#criar-tarefa .criar-tarefa-btn {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+#editar-tarefa .editar-anotacoes-titulo,
+#remover-tarefa .editar-anotacoes-titulo {
+    background: #5F9EA0;
+    background: radial-gradient(circle, var(---cor02) 0%, var(---cor03) 75%, var(---cor03) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+#pesquisar-filtro {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 10px;
+
+    padding: 10px 0px 10px 0px;
+}
+
+#pesquisar-filtro input,
+#pesquisar-filtro select {
+    width: 100%;
+}
+
+#pesquisar-filtro .filtro {
+    border-left: 1px solid gray;
+    padding-left: 5px;
+}
+
+#pesquisar-filtro #filtro-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../images/seta.svg);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: 12px;
+}
+
+
+
+
+
+#anotacoes .anotacoes-titulo {
+    background: radial-gradient(circle, var(---cor02) 0%, var(---cor03) 75%, var(---cor03) 100%);
+    color: whitesmoke;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+#anotacoes .tarefa {
+    background-color: rgba(0, 0, 0, 0.050);
+    color: black;
+    border-left: 5px solid red;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tarefa h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tarefa-vazio {
+    background-color: rgba(0, 0, 0, 0.050);
+    color: gray;
+    text-align: center;
+    border: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#anotacoes .tarefa div i {
+    background-color: var(---cor02);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    padding: 2px;
+    transition: .2s;
+}
+
+#anotacoes .tarefa div i:hover {
+    background-color: var(---cor03);
+}
+
+#anotacoes .concluido {
+    background-color: rgba(0, 0, 0, 0.150);
+
+    border-left: 5px solid green;
+}
+
+#anotacoes .concluido h3 {
+    text-decoration: line-through;
+}
+
+
+
+
+
+small {
+    background-color: rgba(255, 166, 0, 0.750);
+    color: yellow;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1rem;
+    position: fixed;
+    top: 5px;
+    opacity: 100;
+    transition: .2s;
+    user-select: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-triangle-exclamation {
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.fa-xmark {
+    cursor: pointer;
+    background-color: rgba(255, 255, 0, 0.300);
+    font-size: 1rem;
+    padding: 5px;
+    margin-left: 2px;
+}
+
+
+
+
+
+.esconder {
+    display: none !important;
+}
+
+.ocultar {
+    opacity: 0;
+}
+
+
+
+
+
+@media (max-width: 425px) {
+
+    #pesquisar-filtro #filtro-select {
+        background-image: none;
+    }
+
+    #editar-tarefa,
+    #remover-tarefa {
+        text-align: center;
+    }
+
+    #pesquisar-filtro {
+        grid-template-columns: 3fr 2fr;
+    }
+}
