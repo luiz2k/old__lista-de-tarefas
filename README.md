@@ -2,7 +2,7 @@
 
 ![Imagem do projeto](./assets/images/demonstracao-do-projeto.gif)
 
-### [Visitar Projeto](https://lista-de-tarefas-mu-sandy.vercel.app/)
+### [Visitar Projeto](https://listadetarefas-luiz2k.vercel.app/)
 
 ---
 
